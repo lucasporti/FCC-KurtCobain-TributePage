@@ -1,0 +1,110 @@
+:root{
+    --background-dark: #0a0a0a;
+    --primary-color: #ca964e;
+    --gray-color: #a9a9a9;
+    --secondary-white: #f5f5f5;
+    --secondary-black: #2c3135;
+    --tertiary-black: #151515;
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+/* Nav section*/
+nav{
+    background-color: var(--primary-color);
+    width: 100%;
+}
+.nav__container{
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo{
+    font-size: 20px;
+    font-weight: 800;
+}
+.nav__logo a{
+    text-decoration: none;
+    color: var(--background-dark);
+}
+.nav__menu{
+    width: 550px;
+}
+.nav__menu ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    gap: 30px;
+    font-weight: 800;
+    color:var(--background-dark);
+}
+.nav__menu a{
+    text-decoration: none;
+    color: var(--background-dark);
+}
+.nav__menu a:hover{
+    color: var(--secondary-white);
+    text-decoration: line-through;
+    transition: 0.5s;
+}
+.nav__social ul{
+    display: flex;
+    gap: 20px;
+}
+.nav__social a{
+    color:var(--background-dark);
+    text-decoration: none;
+}
+svg{
+    height: 25px;
+}
+svg:hover{
+    fill: var(--secondary-white);
+    transition: 0.45s;
+}
+/* HERO SECTION */
+.hero{
+    background-color: var(--background-dark);
+    height: 750px;
+}
+.hero__container-content{
+    padding: 130px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 750px;
+}
+.hero__text{
+    color: var(--primary-color);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hero__text .hero__title{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.hero__text .hero__description{
+    color: var(--gray-color);
+    line-height: 30px;
+    font-weight: 400;
+}
+.hero__image{
+    border: 10px solid var(--secondary-black);
+    border-radius: 150px;
+    overflow: hidden;
+}
+.hero__image img{
+    height: 480px;
+}
+
