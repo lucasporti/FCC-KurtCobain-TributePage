@@ -14,13 +14,14 @@ html{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
-/* Nav section*/
+/*! <--------- Header Nav Section --------->*/
 nav{
     background-color: var(--primary-color);
     width: 100%;
 }
 .nav__container{
     width: 90%;
+    max-width: 1190px;
     height: 60px;
     margin: 0 auto;
     display: flex;
@@ -52,7 +53,6 @@ nav{
 }
 .nav__menu a:hover{
     color: var(--secondary-white);
-    text-decoration: line-through;
     transition: 0.5s;
 }
 .nav__social ul{
@@ -70,7 +70,7 @@ svg:hover{
     fill: var(--secondary-white);
     transition: 0.45s;
 }
-/* HERO SECTION */
+/*! <--------- Index - Hero section --------->*/
 .hero{
     background-color: var(--background-dark);
     height: 750px;
@@ -80,8 +80,10 @@ svg:hover{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 750px;
+    height: 730px;
 }
+
+/* hero left */
 .hero__text{
     color: var(--primary-color);
     width: 500px;
@@ -99,12 +101,93 @@ svg:hover{
     line-height: 30px;
     font-weight: 400;
 }
+
+/* hero right */
 .hero__image{
-    border: 10px solid var(--secondary-black);
-    border-radius: 150px;
+    border: 16px solid var(--secondary-black);
+    border-radius: 1000px;
     overflow: hidden;
+    transition: all 0.35s ease-in-out;
 }
 .hero__image img{
     height: 480px;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+}
+.hero__image img:hover{
+    transform: scale(1.18);
+    transition: all 0.6s ease-out 0s;
 }
 
+/*! <--------- Biography Section --------->*/
+main{
+    background-color: var(--tertiary-black);
+    height: 100vh;
+    padding: 110px;
+}
+#biography{
+    max-width: 1160px;
+}
+#biography .title__container{
+    text-align: center;
+}
+#biography .title__container h1{
+    color: var(--secondary-white);
+    font-size: 37px;
+    margin: 20px 0;
+    font-weight: 900;
+}
+#biography .title__container h2{
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 900;
+    margin: 20px 0 40px;
+}
+#biography .biography__container, #biography .biography__link{
+    color: var(--gray-color);
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+#biography .biography__container strong{
+    color: var(--gray-color);
+    font-weight: 900;
+    letter-spacing: none;
+}
+#biography .biography__container a, #biography .biography__link{
+    color: var(--primary-color);
+}
+#biography .biography__container a:hover, #biography .biography__link:hover{
+    color: var(--secondary-white);
+}
+
+/*TOP BUTTON*/
+
+.top__button {
+    bottom: 20px;
+    right: -80px;
+    z-index: 999;
+    font-size: 25px;
+    text-align: center;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.top__button.active {
+    right: 20px;
+    transform: rotate(0deg);
+}
+
+.top__button:hover {
+    color: var(--secondary-white);
+    box-shadow: 0px 0px 10px rgba(255, 154, 59, 0.726);
+}
