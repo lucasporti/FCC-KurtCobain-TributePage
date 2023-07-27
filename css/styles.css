@@ -121,9 +121,10 @@ svg:hover{
 
 /*! <--------- Biography Section --------->*/
 main{
+    display: flex;
+    justify-content: center;
     background-color: var(--tertiary-black);
-    height: 100vh;
-    padding: 110px;
+    padding: 130px 45px;
 }
 #biography{
     max-width: 1160px;
@@ -161,6 +162,33 @@ main{
     color: var(--secondary-white);
 }
 
+.biography__image{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.biography__image .biography__image-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.biography__image .biography__image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+}
+.biography__image .biography__image-card img:hover{
+    transform: scale(1.18);
+    transition: all 0.6s ease-out 0s;
+}
 /*TOP BUTTON*/
 
 .top__button {
