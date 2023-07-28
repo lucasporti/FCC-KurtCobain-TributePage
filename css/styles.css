@@ -428,5 +428,32 @@ main{
 .legacy{
     padding: 130px 85px;
 }
+.legacy hr{
+    border: 1px solid var(--secondary-black);
+    margin-top: 100px;
+    margin-bottom: -60px;
+}
+
+/*! FOOTER */
+footer{
+    background-color: var(--tertiary-black);
+
+}
+footer p{
+    color: var(--gray-color);
+    font-size: 15px;
+    margin-top: -50px;
+}
+footer a{
+    color: var(--gray-color);
+
+}
+footer:hover span.heart,
+footer:hover a,
+footer:hover{
+    cursor: pointer;
+    color: #ff0000;
+    transition: 0.5s;
+}
 
 /*TOP BUTTON*/
