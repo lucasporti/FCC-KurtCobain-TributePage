@@ -63,10 +63,10 @@ nav{
     color:var(--background-dark);
     text-decoration: none;
 }
-svg{
+.nav__social svg{
     height: 25px;
 }
-svg:hover{
+.nav__social svg:hover{
     fill: var(--secondary-white);
     transition: 0.45s;
 }
@@ -122,44 +122,50 @@ svg:hover{
 /*! <--------- Biography Section --------->*/
 main{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--tertiary-black);
-    padding: 130px 45px;
 }
 #biography{
     max-width: 1160px;
+    padding: 130px 0px;
 }
-#biography .title__container{
+.title__container{
     text-align: center;
 }
-#biography .title__container h1{
+.title__container h1{
     color: var(--secondary-white);
     font-size: 37px;
     margin: 20px 0;
     font-weight: 900;
 }
-#biography .title__container h2{
+.title__container h2{
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 900;
     margin: 20px 0 40px;
 }
-#biography .biography__container, #biography .biography__link{
+.biography__container, 
+.biography__link{
+    text-align: justify;
     color: var(--gray-color);
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 35px;
 }
-#biography .biography__container strong{
+.biography__container strong{
     color: var(--gray-color);
     font-weight: 900;
     letter-spacing: none;
 }
-#biography .biography__container a, #biography .biography__link{
+.biography__container a, 
+.biography__link{
     color: var(--primary-color);
 }
-#biography .biography__container a:hover, #biography .biography__link:hover{
+.biography__container a:hover, 
+.biography__link:hover{
     color: var(--secondary-white);
+    transition: 0.3s;
 }
 
 .biography__image{
@@ -169,7 +175,7 @@ main{
     gap: 40px;
 }
 
-.biography__image .biography__image-card{
+.biography__image-card{
     display: flex;
     position: relative;
     justify-content: center;
@@ -179,43 +185,248 @@ main{
     overflow: hidden;
     transition: all 0.6s;
 }
-.biography__image .biography__image-card img{
+.biography__image-card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.6s ease-in-out;
 }
-.biography__image .biography__image-card img:hover{
+.biography__image-card img:hover{
     transform: scale(1.18);
     transition: all 0.6s ease-out 0s;
 }
-/*TOP BUTTON*/
 
-.top__button {
-    bottom: 20px;
-    right: -80px;
-    z-index: 999;
-    font-size: 25px;
-    text-align: center;
-    transform: rotate(180deg);
+/*! LIFE SECTION*/
+#life__section{
+    background-color: var(--background-dark);
+    padding: 130px 85px;
+}
+
+.life__container, 
+.life__link{
+    text-align: justify;
+    color: var(--gray-color);
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+.life__container a, 
+.life__link{
+    color: var(--primary-color);
+}
+.life__link:hover{
+    color: var(--secondary-white);
+    transition: 0.3s;
+}
+.life__image-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.life__image{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.life__image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+}
+.life__image-card img:hover{
+    transform: scale(1.18);
+    transition: all 0.6s ease-out 0s;
+}
+
+/*! MUSIC SECTION*/
+#music{
+    padding: 130px 85px;
+}
+
+.music__container, 
+.music__link{
+    text-align: justify;
+    color: var(--gray-color);
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+.music__container a, 
+.music__link{
+    color: var(--primary-color);
+}
+.music__link:hover{
+    color: var(--secondary-white);
+    transition: 0.3s;
+}
+.music__image-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+.music__image{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.music__image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+}
+.music__image-card img:hover{
+    transform: scale(1.18);
+    transition: all 0.6s ease-out 0s;
+}
+#music hr{
+    border: 1px solid var(--secondary-black);
+    width: 100%;
+    margin-top: 50px;
+}
+/* CD CARDS */
+.cd__card{
+    border: none;
+}
+.music__cd-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 41px;
-    height: 41px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--gray-color);
+    transition: all 0.5s;
+    padding: 35px 30px;   
+}
+
+.music__cd-card:hover {
+    background-color: var(--secondary-white);
+    border: 1px solid var(--primary-color);
+}
+.music__cd-card:hover .music__cd-svg,
+.music__cd-card:hover .music__cd-title,
+.music__cd-card:hover .music__cd-description{
     color: var(--background-dark);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all ease-in-out 0.5s;
 }
 
-.top__button.active {
-    right: 20px;
-    transform: rotate(0deg);
+.music__cd-card:hover .biography__cd-svg {
+    fill: #0a0a0a;
+    transition: all ease-in-out 0.5s;
 }
 
-.top__button:hover {
+.music__cd-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.music__cd-content h3{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
     color: var(--secondary-white);
-    box-shadow: 0px 0px 10px rgba(255, 154, 59, 0.726);
+    padding: 10px;
 }
+.music__cd-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.music__cd-album {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+}
+.music__cd-description{
+    font-size: 13px;
+    line-height: 19px;
+    text-align: justify;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+}
+.biography__cd-svg {
+    width: 80%;
+    height: 80%;
+    fill: var(--primary-color);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.cd__card audio {
+    width: 101%;
+    height: 70px;
+    border-radius: 30px;
+    border: 3px solid var(--primary-color);
+}
+
+/*! BANNER IMAGE*/
+#banner {
+    display: flex;
+    align-items: flex-end;
+    padding:130px;
+    width: 100%;
+    height: 103vh;
+    transition: all 0.35s ease-in-out;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/hero/legacy.webp);
+}
+.banner__image-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.banner__title{
+    color: var(--secondary-white);
+    font-size: 34px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0,1);
+}
+.banner__subtitle{
+    color: var(--primary-color);
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 7px rgb(0, 0, 0);
+}
+
+/*! LEGACY SECTION */
+.legacy{
+    padding: 130px 85px;
+}
+
+/*TOP BUTTON*/
