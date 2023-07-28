@@ -1,3 +1,5 @@
+/* SCROLL TO TOP BUTTON */
+
 const btnToTop = document.querySelector("#btnScrollToTop");
 
 btnToTop.addEventListener("click", () =>{
