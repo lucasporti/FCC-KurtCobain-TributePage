@@ -43,6 +43,7 @@ nav{
     display: flex;
     justify-content: space-between;
     font-size: 15px;
+    flex-wrap: wrap;
     gap: 30px;
     font-weight: 800;
     color:var(--background-dark);
